@@ -28,6 +28,25 @@ const Time = () => {
                     <p>Age</p>
                 </div>
             </div>
+
+            <h2>Add A Break</h2>
+            <div className='break-time'>
+                <a>15<span>s</span></a>
+                <a>20<span>s</span></a>
+                <a>25<span>s</span></a>
+                <a>30<span>s</span></a>
+            </div>
+            <h2>Exercise Details</h2>
+            <div className='exercise-time'>
+                <h3>Exercise Details</h3>
+                <p>00 <span>Scound</span></p>
+            </div>
+            <div className='exercise-break-time'>
+                <h3>Break time</h3>
+                <p>00 <span>Scound</span></p>
+            </div>
+
+            <button className='add-to-list-btn'>Activity Completed</button>
         </div>
     );
 };

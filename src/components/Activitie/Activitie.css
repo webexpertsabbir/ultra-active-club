@@ -22,6 +22,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
 }
 .activitie-text p{
     margin: 5px 0px;

@@ -33,3 +33,21 @@
 .user-body-info div p{
  margin: 5px 0px;
 }
+.break-time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.break-time{
+    cursor: pointer;
+}
+.exercise-time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.exercise-break-time{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
