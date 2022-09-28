@@ -1,0 +1,35 @@
+.user-dtl{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.user-dtl img{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.user-dtl p{
+    margin: 0px;
+}
+.user-dtl h2{
+    margin: 0px;
+}
+.user-body-info{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+}
+.sub{
+    font-size: 16px;
+    font-family: 200;
+    color: gray;
+}
+.user-body-info div h2{
+    margin: 0px;
+    
+}
+.user-body-info div p{
+ margin: 5px 0px;
+}

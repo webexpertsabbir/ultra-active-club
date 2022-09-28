@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Activitie from '../Activitie/Activitie';
 import Header from '../Header/Header';
+import Time from '../Time/Time';
 import './Activities.css'
 
 const Activities = () => {
@@ -14,7 +15,7 @@ const Activities = () => {
     }, [])
     return (
         <div className='activite'>
-            <div>
+            <div className='activites-container'>
                 <Header></Header>
                 <h3>Select today’s exercise</h3>
                 <div className='activitie-grid'>
@@ -26,8 +27,8 @@ const Activities = () => {
                     }
                 </div>
             </div>
-            <div>
-                <h1>cart activites</h1>
+            <div className='user-activities'>
+                <Time></Time>
             </div>
         </div>
     );

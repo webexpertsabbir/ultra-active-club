@@ -8,7 +8,7 @@ const Activitie = (props) => {
             <img src={img} alt="" />
             <div className='activitie-text'>
                 <h2>{name}</h2>
-                <p>{description.slice(0, 100)} ...</p>
+                <p>{description.slice(0, 95)} ...</p>
                 <p><b>Age:</b> {age} years</p>
                 <p><b>Time required:</b> {time}s</p>
             </div>
