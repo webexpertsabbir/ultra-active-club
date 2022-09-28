@@ -3,3 +3,9 @@
     grid-template-columns: 4fr 1fr;
     margin: 0px 100px;
 }
+.activitie-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    border: 1px solid g;
+}
