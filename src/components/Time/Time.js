@@ -19,7 +19,7 @@ for(const activite of time){
     // console.log(totalTime);
 }
 
-const [sabbir, setSabbir] = useState(true);
+const [storeTime, setStoreTime] = useState(true);
 
 // useEffect( () => {
 //     // console.log(brackTimeElement.current.innerText)
@@ -27,17 +27,17 @@ const [sabbir, setSabbir] = useState(true);
 const brackTime = (e) =>{
     const breakTime = e.target.innerText;
    
-    setSabbir(breakTime)
+    setStoreTime(breakTime)
 
     let breackTime = {breakTime};
-    localStorage.setItem("breack-time", JSON.stringify(breackTime))
+    localStorage.setItem("breackTime", JSON.stringify(breackTime))
 }
 
 const getStoreTime = () =>{
     
     let breackTime = {};
     //get the shopping cart from local storage
-    const storedCart = localStorage.getItem('breack-time');
+    const storedCart = localStorage.getItem('breackTime');
    
     breackTime = JSON.parse(storedCart);
     
@@ -47,9 +47,10 @@ useEffect(()=>{
     const storeTime = getStoreTime();
     // console.log(storeTime)
     const savedTime = storeTime.breakTime;
+
     // console.log(savedTime)
     
-    setSabbir(savedTime)
+    setStoreTime(savedTime);
 },[])
 
     return (
@@ -90,7 +91,7 @@ useEffect(()=>{
             </div>
             <div className='exercise-break-time'>
                 <h3>Break time</h3>
-                <p>{sabbir} <span>Scound</span></p>
+                <p>{storeTime} <span>Scound</span></p>
             </div>
 
             <button onClick={notify} className='add-to-list-btn'>Activity Completed</button> <ToastContainer />
