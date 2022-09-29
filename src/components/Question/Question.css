@@ -1,0 +1,9 @@
+.question{
+    padding: 50px 250px;
+}
+.question .title{
+    color: green;
+}
+.question h3{
+    text-align: center;
+}
