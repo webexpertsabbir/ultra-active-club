@@ -9,6 +9,7 @@ import { faLocation } from '@fortawesome/free-solid-svg-icons';
 const notify = () => toast("congratulation");
 
 const Time = (props) => {
+const [storeTime, setStoreTime] = useState(true);
 const {time} = props;
 
 // console.log(brackTime.e);
@@ -19,11 +20,8 @@ for(const activite of time){
     // console.log(totalTime);
 }
 
-const [storeTime, setStoreTime] = useState(true);
 
-// useEffect( () => {
-//     // console.log(brackTimeElement.current.innerText)
-// }, [])
+
 const brackTime = (e) =>{
     const breakTime = e.target.innerText;
    
@@ -37,20 +35,20 @@ const getStoreTime = () =>{
     
     let breackTime = {};
     //get the shopping cart from local storage
-    const storedCart = localStorage.getItem('breackTime');
+    const storedTime = localStorage.getItem('breackTime');
    
-    breackTime = JSON.parse(storedCart);
+    breackTime = JSON.parse(storedTime);
     
     return breackTime;
 }
 useEffect(()=>{
     const storeTime = getStoreTime();
     // console.log(storeTime)
-    const savedTime = storeTime.breakTime;
+    if(storeTime){
+        const savedTime = storeTime.breakTime;
+        setStoreTime(savedTime);
+    }
 
-    // console.log(savedTime)
-    
-    setStoreTime(savedTime);
 },[])
 
     return (
@@ -87,11 +85,11 @@ useEffect(()=>{
             <h2>Exercise Details</h2>
             <div className='exercise-time'>
                 <h3>Exercise Details</h3>
-                <p>{totalTime} <span>Scound</span></p>
+                <p>{totalTime} <span>Sce</span></p>
             </div>
             <div className='exercise-break-time'>
                 <h3>Break time</h3>
-                <p>{storeTime} <span>Scound</span></p>
+                <p>{storeTime} <span>Sce</span></p>
             </div>
 
             <button onClick={notify} className='add-to-list-btn'>Activity Completed</button> <ToastContainer />

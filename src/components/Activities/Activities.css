@@ -17,3 +17,27 @@
 .activites-container{
     padding: 0px 20px 0px 0px;
 }
+
+@media only screen and (max-width: 1024px) {
+    .activitie-grid{
+        
+        grid-template-columns: repeat(2, 1fr);
+       
+       
+    }
+    .activite{
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        
+    }
+
+  }
+
+  @media only screen and (max-width: 500px) {
+    .activitie-grid{
+        
+        grid-template-columns:  1fr;
+       
+       
+    }
+  }
