@@ -1,19 +1,56 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import './Time.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocation } from '@fortawesome/free-solid-svg-icons';
+ import { ToastContainer, toast } from 'react-toastify';
 
+
+
+const notify = () => toast("congratulation");
 
 const Time = (props) => {
 const {time} = props;
-// console.log(time);
+
+// console.log(brackTime.e);
 
 let totalTime = 0;
 for(const activite of time){
     totalTime = totalTime + activite.time;
-    console.log(totalTime);
+    // console.log(totalTime);
 }
 
+const [sabbir, setSabbir] = useState(true);
+
+// useEffect( () => {
+//     // console.log(brackTimeElement.current.innerText)
+// }, [])
+const brackTime = (e) =>{
+    const breakTime = e.target.innerText;
+   
+    setSabbir(breakTime)
+
+    let breackTime = {breakTime};
+    localStorage.setItem("breack-time", JSON.stringify(breackTime))
+}
+
+const getStoreTime = () =>{
+    
+    let breackTime = {};
+    //get the shopping cart from local storage
+    const storedCart = localStorage.getItem('breack-time');
+   
+    breackTime = JSON.parse(storedCart);
+    
+    return breackTime;
+}
+useEffect(()=>{
+    const storeTime = getStoreTime();
+    // console.log(storeTime)
+    const savedTime = storeTime.breakTime;
+    // console.log(savedTime)
+    
+    setSabbir(savedTime)
+},[])
 
     return (
         <div>
@@ -41,10 +78,10 @@ for(const activite of time){
 
             <h2>Add A Break</h2>
             <div className='break-time'>
-                <a>15<span>s</span></a>
-                <a>20<span>s</span></a>
-                <a>25<span>s</span></a>
-                <a>30<span>s</span></a>
+                <a><span onClick={(e) => brackTime(e)}>15</span>s</a>
+                <a><span onClick={(e) => brackTime(e)}>20</span>s</a>
+                <a><span onClick={(e) => brackTime(e)}>30</span>s</a>
+                <a><span onClick={(e) => brackTime(e)}>40</span>s</a>
             </div>
             <h2>Exercise Details</h2>
             <div className='exercise-time'>
@@ -53,10 +90,10 @@ for(const activite of time){
             </div>
             <div className='exercise-break-time'>
                 <h3>Break time</h3>
-                <p>00 <span>Scound</span></p>
+                <p>{sabbir} <span>Scound</span></p>
             </div>
 
-            <button className='add-to-list-btn'>Activity Completed</button>
+            <button onClick={notify} className='add-to-list-btn'>Activity Completed</button> <ToastContainer />
         </div>
     );
 };

@@ -8,6 +8,8 @@ const Activities = () => {
 
     const [activites, setActivites] = useState([]);
     const [time, setTime] = useState([]);
+    // const [brack, setBreack] = useState([])
+
 
     useEffect( () => {
         fetch('activites.json')
@@ -19,7 +21,13 @@ const Activities = () => {
         // console.log(activitie);
         const newTime = [...time, activitie]
         setTime(newTime)
-    }   
+    }
+    
+    // const brackTime = (e) =>{
+    //      console.log(e);
+    
+    //     }
+
     return (
         <div className='activite'>
             <div className='activites-container'>
@@ -31,12 +39,15 @@ const Activities = () => {
                         key={activitie.id}
                         activitie={activitie}
                         handelActivity ={handelActivity}
+                        
                     ></Activitie>) 
                     }
                 </div>
             </div>
             <div className='user-activities'>
-                <Time time={time}></Time>
+                <Time time={time}
+                // brackTime={brackTime}
+                ></Time>
             </div>
         </div>
     );
