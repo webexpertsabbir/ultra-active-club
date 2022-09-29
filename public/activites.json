@@ -12,7 +12,7 @@
         "name": "Box Jump",
         "description": "This is a plyometric movement (i.e. a quick, movement that starts with a muscle engthening action, immediately followed by a muscle shortening one) that will help develop strength and power in your legs, specifically the hamstrings, glutes and quads.",
         "img": "https://www.stepsofjustice.org/wp-content/uploads/2020/01/box.jpg",
-        "time": 30,
+        "time": 35,
         "age": "20-25"
     },
     {
@@ -20,7 +20,7 @@
         "name": "Plank",
         "description": "This is a fantastic exercise for your core that can be done in loads of different ways, depending on what you want to achieve. You can also perform a plank at both high and low intensity levels.",
         "img": "https://images.saymedia-content.com/.image/ar_3:2%2Cc_limit%2Ccs_srgb%2Cq_auto:eco%2Cw_1400/MTgyNjExNTk3MDgzMjg4OTk1/amazing-benefits-of-doing-plank.png",
-        "time": 30,
+        "time": 40,
         "age": "20-25"
     },
     {
@@ -28,7 +28,7 @@
         "name": "Bench Press",
         "description": "An exercise that’s key for building upper body strength. To perform this exercise properly, you’ll need to use an Olympic bar or dumbbells for better muscle recruitment.",
         "img": "https://www.inchcalculator.com/wp-content/uploads/2021/07/bench-press-one-rep-max.jpeg",
-        "time": 30,
+        "time": 20,
         "age": "20-25"
     },
     {
@@ -36,7 +36,7 @@
         "name": "Bosu Squats",
         "description": "The unstable surface will help develop core strength, balance and strengthen the ankle stabilisers, which can help prevent common ankle injuries that footballers suffer from. Try them on just one leg at a time for a real challenge.",
         "img": "http://tenis-comesad.ro/wp-content/uploads/2016/11/unnamed.png",
-        "time": 30,
+        "time": 50,
         "age": "20-25"
     },
     {
@@ -44,7 +44,7 @@
         "name": "Foam Roller",
         "description": "Using a foam roller both before and after exercise helps massage away knots and tightness in your muscles, which in turn helps prevent injuries and de-stresses the body so it can work more efficiently. It also increases flexibility, all aiding in the much-needed recovery and maintenance process to ensure peak performance throughout a long season.",
         "img": "https://hips.hearstapps.com/amv-prod-gp.s3.amazonaws.com/gearpatrol/wp-content/uploads/2018/01/The-5-Best-Foam-Rollers-On-The-Market-gear-patrol-GRID-Vibe-full-lead.jpg",
-        "time": 30,
+        "time": 60,
         "age": "20-25"
     }
 ]
