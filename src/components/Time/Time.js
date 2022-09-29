@@ -28,18 +28,15 @@ const brackTime = (e) =>{
     localStorage.setItem("breackTime", JSON.stringify(breackTime))
 }
 
-
 //get local storage
 const getStoreTime = () =>{
-    
     let breackTime = {};
     //get the shopping cart from local storage
     const storedTime = localStorage.getItem('breackTime');
-   
     breackTime = JSON.parse(storedTime);
-    
     return breackTime;
 }
+
 useEffect(()=>{
     const storeTime = getStoreTime();
     // console.log(storeTime)
