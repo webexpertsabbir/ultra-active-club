@@ -4,7 +4,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocation } from '@fortawesome/free-solid-svg-icons';
 
 
-const Time = () => {
+const Time = (props) => {
+const {time} = props;
+// console.log(time);
+
+let totalTime = 0;
+for(const activite of time){
+    totalTime = totalTime + activite.time;
+    console.log(totalTime);
+}
+
+
     return (
         <div>
             <div className='user-dtl'>
@@ -39,7 +49,7 @@ const Time = () => {
             <h2>Exercise Details</h2>
             <div className='exercise-time'>
                 <h3>Exercise Details</h3>
-                <p>00 <span>Scound</span></p>
+                <p>{totalTime} <span>Scound</span></p>
             </div>
             <div className='exercise-break-time'>
                 <h3>Break time</h3>

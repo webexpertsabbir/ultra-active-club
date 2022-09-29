@@ -7,12 +7,19 @@ import './Activities.css'
 const Activities = () => {
 
     const [activites, setActivites] = useState([]);
+    const [time, setTime] = useState([]);
 
     useEffect( () => {
         fetch('activites.json')
         .then(res => res.json())
         .then(data => setActivites(data))
     }, [])
+
+    const handelActivity = (activitie) =>{
+        // console.log(activitie);
+        const newTime = [...time, activitie]
+        setTime(newTime)
+    }   
     return (
         <div className='activite'>
             <div className='activites-container'>
@@ -23,12 +30,13 @@ const Activities = () => {
                     activites.map(activitie => <Activitie
                         key={activitie.id}
                         activitie={activitie}
+                        handelActivity ={handelActivity}
                     ></Activitie>) 
                     }
                 </div>
             </div>
             <div className='user-activities'>
-                <Time></Time>
+                <Time time={time}></Time>
             </div>
         </div>
     );

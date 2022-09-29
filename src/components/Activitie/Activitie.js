@@ -12,7 +12,7 @@ const Activitie = (props) => {
                 <p><b>Age:</b> {age} years</p>
                 <p><b>Time required:</b> {time}s</p>
             </div>
-            <button className='add-to-list-btn'>Add to list</button>
+            <button onClick={()=> props.handelActivity(props.activitie)} className='add-to-list-btn'>Add to list</button>
         </div>
     );
 };
