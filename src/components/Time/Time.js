@@ -4,8 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocation } from '@fortawesome/free-solid-svg-icons';
  import { ToastContainer, toast } from 'react-toastify';
 
-
-
 const notify = () => toast("congratulation");
 
 const Time = (props) => {
@@ -20,8 +18,7 @@ for(const activite of time){
     // console.log(totalTime);
 }
 
-
-
+//set local storage
 const brackTime = (e) =>{
     const breakTime = e.target.innerText;
    
@@ -31,6 +28,8 @@ const brackTime = (e) =>{
     localStorage.setItem("breackTime", JSON.stringify(breackTime))
 }
 
+
+//get local storage
 const getStoreTime = () =>{
     
     let breackTime = {};
